@@ -1,2 +1,2 @@
 # test
-testing
+Untuk Belajar Scrip Sahaja
