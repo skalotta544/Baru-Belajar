@@ -1,6 +1,6 @@
 #
 #!/bin/bash
-#Doctype | malaysian Phreaker Knowledge
+#Skalotta | malaysian Phreaker Copy
 # 
 
 #Initialisasi Var
@@ -27,7 +27,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
 
 #Set Repo
-wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/FrogyX/Knowledge/master/source.list.debian7"
+wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/skalotta544/test/master/Debian7x86.sh"
 wget "http://www.dotdeb.org/dotdeb.gpg"
 wget "http://www.webmin.com/jcameron-key.asc"
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
@@ -94,22 +94,22 @@ service ssh restart
 cd
 
 #Install OpenVPN
-wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/FrogyX/Knowledge/master/openvpn-debian.tar"
+wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/skalotta544/test/blob/master/openvpn-debian.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/server.conf "https://raw.githubusercontent.com/FrogyX/Knowledge/master/server.conf"
+wget -O /etc/openvpn/server.conf "https://raw.githubusercontent.com/skalotta544/test/master/server.conf"
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 iptables -t nat -I POSTROUTING -s 192.168.100.0/24 -o eth0 -j MASQUERADE
 iptables-save > /etc/newiptables.conf
-wget -O /etc/network/if-up.d/iptables "https://raw.githubusercontent.com/FrogyX/Knowledge/master/iptables"
+wget -O /etc/network/if-up.d/iptables "https://raw.githubusercontent.com/skalotta544/test/master/iptables"
 chmod +x /etc/network/if-up.d/iptables
 service openvpn restart
 
 #Configure OpenVPN
 cd /etc/openvpn/
-wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/FrogyX/Knowledge/master/client.conf"
+wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/skalotta544/test/master/client.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
 cp client.ovpn /etc/nginx/sites/main/
 
@@ -129,7 +129,7 @@ cd
 
 #Install Squid3
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/FrogyX/Knowledge/master/squid3.sh"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/skalotta544/test/master/squid3.sh"
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
