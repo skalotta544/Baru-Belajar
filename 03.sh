@@ -1,7 +1,7 @@
 #
 #!/bin/bash
 #Script senarai akaun pelanggan
-#Doctype | Malaysian Phreaker Knowledge
+#Skalotta | Malaysian Phreaker Copy
 #
 
 echo "==============================================="
@@ -20,6 +20,6 @@ Total="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo "-----------------------------------------------"
 echo "Total Account: $Total user"
 echo "==============================================="
-echo "Doctype | Malaysian Phreaker Knowledge | FrogyX"
+echo "Skalotta | Malaysian Phreaker Knowledge | KS"
 echo "==============================================="
 echo ""
