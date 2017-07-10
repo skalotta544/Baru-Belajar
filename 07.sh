@@ -1,13 +1,13 @@
 #
 #!/bin/bash
 #Script hapus akaun SSH/VPN
-#Doctype | Malaysian Phreaker Knowledge
+#Skalotta | Malaysian Phreaker Copy
 #
 
 read -p "Username Account going to be delete: " User
 userdel -r $User
 
 echo "==============================================="
-echo "Doctype | Malaysian Phreaker Knowledge | FrogyX"
+echo "Skalotta | Malaysian Phreaker Knowledge | KS"
 echo "==============================================="
 echo ""
