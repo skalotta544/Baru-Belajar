@@ -1,7 +1,7 @@
 #
 #!/bin/bash
 #Script senarai akaun aktif
-#Doctype | Malaysian Phreaker Knowledge
+#Skalotta | Malaysian Phreaker Copy
 #
 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
