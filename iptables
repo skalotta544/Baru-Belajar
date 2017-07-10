@@ -1,6 +1,6 @@
 #
 #!/bin/sh
 #Restore IPTables Change
-#Doctype | Malaysian Phreaker Knowledge
+#Skalotta | Malaysian Phreaker KS
 #
 iptables-restore < /etc/newiptables.conf
