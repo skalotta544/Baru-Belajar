@@ -1,7 +1,7 @@
 #
 #!/bin/bash
 #Script cipta akaun SSH/VPN
-#Doctype | Malaysian Phreaker Knowledge
+#Skalotta | Malaysian Phreaker Copy
 #
 
 read -p " Username : " User
@@ -25,6 +25,6 @@ echo -e " Username: $User"
 echo -e " Password: $Pass"
 echo -e " Expired Days: $Exp"
 echo "==============================================="
-echo "DOCTYPE | Malaysian Phreaker Knowledge | FrogyX"
+echo "Skalotta | Malaysian Phreaker Knowledge | KS"
 echo "==============================================="
 echo ""
